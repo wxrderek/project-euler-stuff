@@ -69,3 +69,12 @@ def maxAndIndex(arr):
             max = arr[i]
             ind = i
     return max, ind
+
+# returns n choose k for integers n > k
+def chooseFunction(n, k):
+    nume, denom1, denom2 = 1, 1, 1
+    for i in range(1, n+1):
+        nume *= i
+        if i <= k: denom1 *= i
+        if i <= n-k: denom2 *= i
+    return nume // (denom1*denom2)
