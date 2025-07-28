@@ -1,6 +1,7 @@
 import numpy as np
 import math
 
+
 # simple selection sort
 def selectSort(arr):
     for i in range(len(arr)):
@@ -10,6 +11,7 @@ def selectSort(arr):
         (arr[i], arr[m]) = (arr[m], arr[i])
     return arr
 
+
 # check if integer x > 0 is prime
 def isPrime(x):
     if x < 2: return False
@@ -17,6 +19,7 @@ def isPrime(x):
     for i in range(3, int(np.sqrt(x))+1, 2):
         if x % i == 0: return False
     return True
+
 
 # return ordered list of prime factors of integer n
 def primeFactors(n):
@@ -35,6 +38,7 @@ def primeFactors(n):
 
     if temp > 1: factors.append(int(temp))
     return factors
+
 
 # returns ordered list of factors of integer x
 def factorsList(n):
@@ -60,6 +64,7 @@ def digitList(x):
         x //= 10
     return digits
 
+
 # return maximum and its index in list of integers as list
 def maxAndIndex(arr):
     max = arr[0]
@@ -69,6 +74,7 @@ def maxAndIndex(arr):
             max = arr[i]
             ind = i
     return max, ind
+
 
 # returns n choose k for integers n > k
 def chooseFunction(n, k):
